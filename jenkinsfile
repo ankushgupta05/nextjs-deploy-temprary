@@ -9,7 +9,7 @@ node {
     stage('Clone Repository'){
         echo 'cloning the repository'
         git(
-            branch:'main'
+            branch:'main',
             url('https://github.com/ankushgupta05/nextjs-deploy-temprary')
         )
     }
