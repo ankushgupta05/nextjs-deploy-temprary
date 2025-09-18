@@ -21,6 +21,12 @@ node {
         sudo chown -R jenkins:jenkins ${appDir}
         rsync -av --delete --exclude='.git' --exclude='node_modules' ./ ${appDir}
         cd ${appDir}
+
+        npm config set fetch-retries 5
+        npm config set fetch-retry-mintimeout 20000
+        npm config set fetch-retry-maxtimeout 120000
+        npm config set fetch-timeout 600000
+
         sudo npm install
         sudo npm run build
         sudo fuser -k 3000/tcp || true
