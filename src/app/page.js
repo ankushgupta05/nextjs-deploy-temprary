@@ -22,7 +22,7 @@ export default function Home() {
           </li>
           <li className="tracking-[-.01em]">
             Save and see your changes instantly.
-            ankush gupta comeback
+            ankush gupta comeback again
           </li>
         </ol>
 
